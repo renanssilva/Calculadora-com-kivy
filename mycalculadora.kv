@@ -1,0 +1,63 @@
+<CalculadoraJanela>
+    orientation: 'vertical'
+
+    BoxLayout:
+        id: display
+        size_hint_y: 0.2
+
+        Label:
+            id: conta
+            text: ''
+            size_hint_x: 0.3
+            font_size: 26
+        Label:
+            id: igual
+            text: ''
+            font_size: 26
+            size_hint_x: 0.3
+        Label:
+            id: resultado
+            text: ''
+            size_hint_x: 0.3
+            font_size: 26
+
+    TextInput:
+        id: informacao
+        background_color: (1, 4, 4, 1)
+        multiline: False
+        font_size: 32
+        size_hint_y: 0.1
+
+    # Criando um BoxLayout para receber 3 GridLayout que conterá os numeros e simbolos
+    BoxLayout:
+        id: main_buttons  # Id da Box Layoult
+        size_hint_y: 0.6
+        spacing: 3
+        GridLayout:
+            id: numeros
+            cols: 3
+            spacing: 3
+
+        GridLayout:
+            id: centro
+            cols: 1
+            spacing: 3
+            size_hint_x: 0.35
+
+        BoxLayout:
+            id: operadores_simbolos
+            orientation: 'vertical'
+            spacing: 3
+
+            GridLayout:
+                id: simbolos
+                cols: 3
+                size_hint_y: 1
+                spacing: 3
+
+    BoxLayout:
+        id: status_bar
+        padding: (0, 3)
+        size_hint_y: 0.1
+
+
